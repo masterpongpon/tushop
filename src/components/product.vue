@@ -16,7 +16,9 @@
         max="100"
       ></b-form-spinbutton>
       <div>
-        <b-button class="mt-3" @click="addToCart" variant="outline-dark">{{ textbutton }}</b-button>
+        <b-button class="mt-3" @click="addToCart" variant="outline-dark">{{
+          textbutton
+        }}</b-button>
       </div>
     </b-card>
   </div>
@@ -34,7 +36,7 @@ export default {
       modalShow: false,
       nump: 1,
       textbutton: "หยิบใส่ตะกร้า",
-      textp: "จำนวน",
+      textp: "จำนวน"
     };
   },
   methods: {
@@ -45,7 +47,7 @@ export default {
         num: this.nump,
         Sum: this.price * this.nump
       });
-      this.$bvModal.show("bv-modal-example")
+      this.$bvModal.show("bv-modal-example");
     }
   }
 };

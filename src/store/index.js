@@ -73,7 +73,7 @@ export default new Vuex.Store({
     sum(state) {
       state.tprice = 0;
       for (let i = 0; i < state.product.length; i++) {
-        state.tprice = state.tprice + state.product[i].price;
+        state.tprice = state.tprice + state.product[i].Sum;
       } 
     },
     deletez(state) {
