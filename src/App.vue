@@ -1,12 +1,35 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div>
+      <b-navbar type="dark" variant="dark">
+        <b-navbar-nav>
+          <router-link to="/" class="container">
+            <b-nav-item href="/">TuuShop</b-nav-item>
+          </router-link>
+        </b-navbar-nav>
+        <b-navebar-nav class="ml-auto">
+          <div>
+            <router-link to="/about">
+              <b-button variant="outline-info" @click="sum">
+                <b-icon icon="basket" aria-hidden="ture"></b-icon>
+              </b-button>
+            </router-link>
+          </div>
+        </b-navebar-nav>
+      </b-navbar>
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+import { mapMutations } from 'vuex';
+export default {
+  methods: {
+    ...mapMutations(["sum"])
+  },
+};
+</script>
 
 <style>
 #app {
