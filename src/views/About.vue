@@ -18,7 +18,7 @@
         </b-col>
         <b-col cols="auto">
           <b-button variant="success" @click="$bvModalshow('bv-modal-example')"
-            >Payment</b-button
+            >จ่ายเงิน</b-button
           >
         </b-col>
       </b-row>
