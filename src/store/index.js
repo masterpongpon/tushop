@@ -75,7 +75,11 @@ export default new Vuex.Store({
       for (let i = 0; i < state.product.length; i++) {
         state.tprice = state.tprice + state.product[i].price;
       } 
-    }
+    },
+    deletez(state) {
+      state.tprice = 0;
+      state.product = []
+    },
   },
   actions: {
   },

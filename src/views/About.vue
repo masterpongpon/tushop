@@ -14,7 +14,7 @@
           <p>ราคารวม = {{ cSum }}</p>
         </b-col>
         <b-col cols="auto">
-          <b-button variant="info" href="/about">ลบสินค้าทั้งหมด</b-button>
+          <b-button variant="info" @click="deletez">ลบสินค้าทั้งหมด</b-button>
         </b-col>
         <b-col cols="auto">
           <b-button variant="success" @click="$bvModalshow('bv-modal-example')"
@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapMutations } from "vuex";
 export default {
   props: {
     product: Array,
@@ -57,6 +57,9 @@ export default {
     return {
       fields: ["nameProduct", "price", "num", "Sum"]
     };
-  }
+  },
+  methods: {
+    ...mapMutations(["deletez"])
+  },
 };
 </script>
