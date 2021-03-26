@@ -26,16 +26,15 @@
 </template>
 
 <script>
-import { mapGetters }  from 'vuex';
+import { mapGetters } from "vuex";
 import Product from "@/components/product.vue";
 export default {
   name: "Home",
   components: {
-    Product
+    Product,
   },
-  computed:{
-    ...mapGetters(["cList","UpProduct"])
+  computed: {
+    ...mapGetters(["cList", "UpProduct"]),
   },
-  
 };
 </script>

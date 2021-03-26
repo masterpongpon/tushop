@@ -56,7 +56,7 @@ export default new Vuex.Store({
     tprice: 0
   },
   getters: {
-    cList: state =>{
+    cList: state => {
       return state.cardList;
     },
     UpProduct: state => value => {
@@ -74,7 +74,7 @@ export default new Vuex.Store({
       state.tprice = 0;
       for (let i = 0; i < state.product.length; i++) {
         state.tprice = state.tprice + state.product[i].Sum;
-      } 
+      }
     },
     deletez(state) {
       state.tprice = 0;
